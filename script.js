@@ -14,7 +14,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
       // Identify call to Segment
       analytics.identify(userId, {
         first_name: firstName,
-        last_name: lastName
+        last_name: lastName,
+        timestamp: new Date() - 900000
       });
 
       //page call, home page
