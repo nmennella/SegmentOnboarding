@@ -9,16 +9,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
       // Get input values
       const firstName = document.getElementById('firstName').value;
       const lastName = document.getElementById('lastName').value;
+      const userId = document.getElementById('userId').value;
 
       // Identify call to Segment
-      analytics.identify('user123', {
+      analytics.identify(userId, {
         first_name: firstName,
         last_name: lastName
       });
 
       // Track call to Segment
       analytics.track('Form Submitted', {
-        user_id: 'user123'
+        user_id: userId
       });
 
       // Reset form
@@ -28,6 +29,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.error('Error: userForm element not found');
   }
 });
+
 
 
 
