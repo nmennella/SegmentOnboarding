@@ -18,13 +18,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
       });
 
       //page call, home page
-      analytics.page("Home"
-         {
-            user_id: userId
-         });
+      analytics.page("Home", {
+        user_id: userId
+      });
+     
+      //page call, stay connected
+      analytics.page("Stay Connected", {
+        user_id: userId
+      });
       
-      //page call, home page
-      analytics.page("Pricing");
+      //page call, pricing
+      analytics.page("Pricing", {
+        user_id: userId
+      });
       
       // Track call to Segment
       analytics.track('Form Submitted', {
