@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Button Click Example</title>
-  <script src="https://cdn.segment.com/analytics.js/v1/EdW7DQqo3uJ8liLShKMeronzZakFvJ3b/analytics.min.js"></script>
-  <script>
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="EdW7DQqo3uJ8liLShKMeronzZakFvJ3b";;analytics.SNIPPET_VERSION="4.15.3";
-  analytics.load("EdW7DQqo3uJ8liLShKMeronzZakFvJ3b");
-  analytics.page();
-  }}();
-  </script>
+  <title>Identify User</title>
 </head>
 <body>
-  <button id="myButton">Click Me</button>
+  <h1>Identify User</h1>
+  <form id="userForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName"><br><br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName"><br><br>
+    <button type="submit">Identify</button>
+  </form>
+
   <script src="script.js"></script>
 </body>
 </html>
+
