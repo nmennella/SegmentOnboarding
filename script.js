@@ -1,23 +1,24 @@
 // script.js
 window.addEventListener('DOMContentLoaded', (event) => {
-  const myButton = document.getElementById('myButton');
+  const userForm = document.getElementById('userForm');
 
-  myButton.addEventListener('click', function() {
-    // Actions to perform when the button is clicked
-    console.log('Button clicked! with new code of user_id in there');
+  userForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get input values
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
 
     // Identify call to Segment
     analytics.identify('user123', {
-      name: 'John Doe',
-      email: 'johndoe@example.com'
-      // additional user properties can be added here
+      first_name: firstName,
+      last_name: lastName
     });
 
-    // Track call to Segment
-    analytics.track('Button Clicked', {
-      user_id: 'user123'
-    });
+    // Reset form
+    userForm.reset();
   });
 });
+
 
 
