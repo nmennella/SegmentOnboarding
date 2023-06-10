@@ -11,12 +11,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
       const lastName = document.getElementById('lastName').value;
       const userId = document.getElementById('userId').value;
 
-      // Identify call to Segment
+      // Calculate the timestamp 15 minutes ago
+      const fifteenMinutesAgo = new Date(Date.now() - 15 * 60 * 1000);
+
+      // Identify call to Segment with the timestamp
       analytics.identify(userId, {
         first_name: firstName,
         last_name: lastName,
-        timestamp: new Date() - 900000
+        timestamp: fifteenMinutesAgo.toISOString()
       });
+
 
       //page call, home page
       analytics.page("Home", {
