@@ -12,6 +12,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
       email: 'johndoe@example.com'
       // additional user properties can be added here
     });
+
+    // Track call to Segment
+    analytics.track('Button Clicked');
   });
 });
+
 
