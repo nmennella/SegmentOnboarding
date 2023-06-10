@@ -17,6 +17,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
         last_name: lastName
       });
 
+      //page call, home page
+      analytics.page("Home"
+         {
+            user_id: userId
+         });
+      
+      //page call, home page
+      analytics.page("Pricing");
+      
       // Track call to Segment
       analytics.track('Form Submitted', {
         user_id: userId
