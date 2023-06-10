@@ -27,14 +27,39 @@ window.addEventListener('DOMContentLoaded', (event) => {
         user_id: userId
       });
       
+       // Track call to Segment, Blog Viewed
+      analytics.track('Blog Viewed', {
+        user_id: userId,
+        category: "Stay Connected",
+        platform: "Web"
+      });
+      
       //page call, pricing
       analytics.page("Pricing", {
         user_id: userId
       });
       
-      // Track call to Segment
-      analytics.track('Form Submitted', {
+      //page call, pricing
+      analytics.page("Webinars", {
         user_id: userId
+      });
+      
+     // Track call to Segment, Webinar Registered
+      analytics.track('Webinar Registered', {
+        user_id: userId,
+        category: "Stay Connected"
+      });
+      
+      // Track call to Segment, Webinar Attended
+      analytics.track('Webinar Attended', {
+        user_id: userId,
+        category: "Stay Connected"
+      });
+      
+      // Track call to Segment, Webinar Attended
+      analytics.track('Demo Requested', {
+        user_id: userId,
+        category: "Stay Connected"
       });
 
       // Reset form
