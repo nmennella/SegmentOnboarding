@@ -24,35 +24,41 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
       //page call, home page
       analytics.page("Home", {
-        user_id: userId
+        user_id: userId,
+        timestamp: fifteenMinutesAgo.toISOString()
       });
      
       //page call, stay connected
       analytics.page("Stay Connected", {
-        user_id: userId
+        user_id: userId,
+        timestamp: fifteenMinutesAgo.toISOString()
       });
       
        // Track call to Segment, Blog Viewed
       analytics.track('Blog Viewed', {
         user_id: userId,
         category: "Stay Connected",
-        platform: "Web"
+        platform: "Web",
+        timestamp: fifteenMinutesAgo.toISOString()
       });
       
       //page call, pricing
       analytics.page("Pricing", {
-        user_id: userId
+        user_id: userId,
+        timestamp: fifteenMinutesAgo.toISOString()
       });
       
       //page call, pricing
       analytics.page("Webinars", {
-        user_id: userId
+        user_id: userId,
+        timestamp: fifteenMinutesAgo.toISOString()
       });
       
      // Track call to Segment, Webinar Registered
       analytics.track('Webinar Registered', {
         user_id: userId,
-        category: "Stay Connected"
+        category: "Stay Connected",
+        timestamp: fifteenMinutesAgo.toISOString()
       });
       
       // Track call to Segment, Webinar Attended
