@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   myButton.addEventListener('click', function() {
     // Actions to perform when the button is clicked
-    console.log('Button clicked!');
+    console.log('Button clicked! with new code of user_id in there');
 
     // Identify call to Segment
     analytics.identify('user123', {
@@ -14,7 +14,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 
     // Track call to Segment
-    analytics.track('Button Clicked');
+    analytics.track('Button Clicked', {
+      user_id: 'user123'
+    });
   });
 });
 
