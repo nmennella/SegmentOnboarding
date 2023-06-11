@@ -17,60 +17,51 @@ window.addEventListener('DOMContentLoaded', (event) => {
       // Identify call to Segment with the timestamp
       analytics.identify(userId, {
         first_name: firstName,
-        last_name: lastName,
-        timestamp: fifteenMinutesAgo.toISOString()
+        last_name: lastName
       });
 
 
       //page call, home page
       analytics.page("Home", {
-        user_id: userId,
-        timestamp: fifteenMinutesAgo.toISOString()
+        user_id: userId
       });
      
       //page call, stay connected
       analytics.page("Stay Connected", {
-        user_id: userId,
-        timestamp: fifteenMinutesAgo.toISOString()
+        user_id: userId
       });
       
        // Track call to Segment, Blog Viewed
       analytics.track('Blog Viewed', {
         user_id: userId,
         category: "Stay Connected",
-        platform: "Web",
-        timestamp: fifteenMinutesAgo.toISOString()
+        platform: "Web"
       });
       
       //page call, pricing
       analytics.page("Pricing", {
-        user_id: userId,
-        timestamp: fifteenMinutesAgo.toISOString()
+        user_id: userId
       });
       
       //page call, pricing
       analytics.page("Webinars", {
-        user_id: userId,
-        timestamp: fifteenMinutesAgo.toISOString()
+        user_id: userId
       });
       
      // Track call to Segment, Webinar Registered
       analytics.track('Webinar Registered', {
         user_id: userId,
-        category: "Stay Connected",
-        timestamp: fifteenMinutesAgo.toISOString()
+        category: "Stay Connected"
       });
       
       // Track call to Segment, Webinar Attended
       analytics.track('Webinar Attended', {
-        user_id: userId,
-        category: "Stay Connected"
+        user_id: userId
       });
       
       // Track call to Segment, Webinar Attended
       analytics.track('Demo Requested', {
-        user_id: userId,
-        category: "Stay Connected"
+        user_id: userId
       });
 
       // Reset form
